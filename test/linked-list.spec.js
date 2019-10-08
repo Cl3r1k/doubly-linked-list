@@ -32,8 +32,8 @@ describe('LinkedList', () => {
             expect(list.tail()).to.equal(413);
             expect(list.head()).to.equal(123);
         });
-
     });
+
     describe('#head', () => {
         const list = new LinkedList();
         it('should return data from the this.head', () => {
@@ -82,13 +82,13 @@ describe('LinkedList', () => {
             expect(list.at(position)).to.equal(data);
         });
 
-        it ('shouldn\'t replace existing values', () => {
+        it('shouldn\'t replace existing values', () => {
             const list = new LinkedList();
             const position = 1;
             const data = 42;
-            let values = [10, 20];            
+            let values = [10, 20];
             values.forEach((value) => { list.append(value) });
-            
+
             list.insertAt(position, data);
             values.splice(position, 0, data);
 
